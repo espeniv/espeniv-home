@@ -1,0 +1,111 @@
+:root {
+  font-family: "Open sans";
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 1);
+  background-color: #000000;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 6vh 30vw 0px 30vw;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+}
+
+h1 {
+  font-family: "ClashDisplay-Medium";
+  font-size: 45px;
+}
+
+h2 {
+  font-family: "ClashDisplay-Regular";
+  font-size: 50px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.image {
+  max-height: 6vh;
+  max-width: 6vh;
+  margin-right: 40px;
+  border-radius: 50%;
+  align-self: center;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  margin-left: 80px;
+  align-self: center;
+}
+
+.ghicon {
+  margin-right: 10px;
+}
+
+.main-section {
+  margin-top: 2vh;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-me {
+  font-size: 28px;
+  font-family: "ClashDisplay-Regular";
+}
+
+/* Fonts */
+
+/*
+* @license
+*
+* Font Family: Clash Display
+* Designed by: Indian Type Foundry
+* URL: https://www.fontshare.com/fonts/clash-display
+* © 2025 Indian Type Foundry
+*
+*/
+
+@font-face {
+  font-family: "ClashDisplay-Regular";
+  src: url("../public/fonts/ClashDisplay-Regular.woff2") format("woff2"),
+    url("../public/fonts/ClashDisplay-Regular.woff") format("woff"),
+    url("../public/fonts/ClashDisplay-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClashDisplay-Medium";
+  src: url("../public/fonts/ClashDisplay-Medium.woff2") format("woff2"),
+    url("../public/fonts/ClashDisplay-Medium.woff") format("woff"),
+    url("../public/fonts/ClashDisplay-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClashDisplay-Semibold";
+  src: url("../fonts/ClashDisplay-Semibold.woff2") format("woff2"),
+    url("../fonts/ClashDisplay-Semibold.woff") format("woff"),
+    url("../fonts/ClashDisplay-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
