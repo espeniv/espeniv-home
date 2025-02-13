@@ -3,23 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@97,450&display=swap');
-    </style>
     <title>Espen Iversen</title>
   </head>
   <body>
     <div class="header">
-      <img class="image" src="./public/hello.png"></img><h1>Espen Iversen</h1>
+      <div class="header-left">
+        <img class="image" src="./public/hello.png" />
+        <h1>Espen Iversen</h1>
+      </div>
       <div class="social-media">
-        <a href="https://github.com/espeniv"> 
-          <img height="30" class="ghicon" src="https://cdn.simpleicons.org/github/white" />
+        <a href="https://github.com/espeniv">
+          <img
+            height="30"
+            class="ghicon"
+            src="https://cdn.simpleicons.org/github/white"
+          />
         </a>
       </div>
     </div>
     <div class="main-section">
-      <p class="about-me">Hi! I'm Espen Iversen, a computer science student. Check out some of my work below.<p>
+      <p class="about-me">
+        Hi! I'm Espen Iversen, a computer science student. You can see my
+        projects below.
+      </p>
       <h2>Projects</h2>
+      <a href="https://weather.espeniv.com/">
+        <div class="project-container">
+          <h3>WeatherApp</h3>
+          <p class="project-description">
+            This weather app is a simple application that displays the current
+            weather and a short forecast for any selected location. I made it to
+            practice my skills with react.
+          </p>
+        </div>
+      </a>
     </div>
     <script type="module" src="/src/main.js"></script>
   </body>

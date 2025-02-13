@@ -1,10 +1,8 @@
 :root {
   font-family: "Open sans";
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 1);
   background-color: #000000;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -12,7 +10,7 @@
 }
 
 body {
-  margin: 6vh 30vw 0px 30vw;
+  margin: 50;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -22,23 +20,43 @@ body {
 h1 {
   font-family: "ClashDisplay-Medium";
   font-size: 45px;
+  margin: 0;
 }
 
 h2 {
   font-family: "ClashDisplay-Regular";
   font-size: 50px;
+  margin-top: 120px;
+  margin-bottom: -10px;
+}
+
+h3 {
+  font-family: "ClashDisplay-Medium";
+  font-size: 30px;
 }
 
 .header {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   width: 100%;
-  justify-content: space-around;
+  max-width: 700px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin-top: 64px;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .image {
   max-height: 6vh;
   max-width: 6vh;
+  width: 80px;
+  height: 80px;
   margin-right: 40px;
   border-radius: 50%;
   align-self: center;
@@ -53,19 +71,112 @@ h2 {
 
 .ghicon {
   margin-right: 10px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
+    hue-rotate(0deg) brightness(100%) contrast(100%);
+  transition: filter 0.3s ease;
+}
+
+.ghicon:hover {
+  filter: brightness(0) saturate(100%) invert(73%) sepia(12%) saturate(1090%)
+    hue-rotate(194deg) brightness(103%) contrast(98%);
 }
 
 .main-section {
-  margin-top: 2vh;
-  margin-left: 3vw;
-  margin-right: 3vw;
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  max-width: 700px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin-top: 64px;
 }
 
 .about-me {
   font-size: 28px;
-  font-family: "ClashDisplay-Regular";
+  font-family: "GeneralSans-Regular";
+  margin-bottom: 80px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-container {
+  margin-bottom: 48px;
+  padding: 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-bottom: -40px;
+}
+
+.project-container h3 {
+  transition: color 0.3s ease;
+  margin-bottom: 8px;
+}
+
+.project-container:hover h3 {
+  color: #8db4fc;
+}
+
+.project-description {
+  font-size: 22px;
+  font-family: "GeneralSans-Regular";
+  color: rgb(110, 110, 110);
+  margin-top: 8px;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 32px;
+  }
+
+  .header-left {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .image {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+  }
+
+  .social-media {
+    margin-left: auto;
+    margin-top: 0;
+  }
+
+  .main-section {
+    margin-top: 48px;
+  }
+
+  .about-me {
+    margin-bottom: 48px;
+    font-size: 24px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 40px;
+    margin-top: 100px;
+    margin-bottom: 0px;
+  }
+
+  .project-container {
+    margin-bottom: -40px;
+  }
+
+  .project-description {
+    font-size: 18px;
+  }
 }
 
 /* Fonts */
@@ -105,6 +216,65 @@ h2 {
   src: url("../fonts/ClashDisplay-Semibold.woff2") format("woff2"),
     url("../fonts/ClashDisplay-Semibold.woff") format("woff"),
     url("../fonts/ClashDisplay-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+/**
+* @license
+*
+* Font Family: General Sans
+* Designed by: Frode Helland
+* URL: https://www.fontshare.com/fonts/general-sans
+* © 2025 Indian Type Foundry
+*
+
+* General Sans Light 
+* General Sans Regular 
+* General Sans Medium 
+* General Sans Semibold 
+* General Sans Bold 
+
+
+*
+*/
+
+@font-face {
+  font-family: "GeneralSans-Light";
+  src: url("../fonts/GeneralSans-Light.woff2") format("woff2"),
+    url("../fonts/GeneralSans-Light.woff") format("woff"),
+    url("../fonts/GeneralSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GeneralSans-Regular";
+  src: url("../fonts/GeneralSans-Regular.woff2") format("woff2"),
+    url("../fonts/GeneralSans-Regular.woff") format("woff"),
+    url("../fonts/GeneralSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GeneralSans-Medium";
+  src: url("../fonts/GeneralSans-Medium.woff2") format("woff2"),
+    url("../fonts/GeneralSans-Medium.woff") format("woff"),
+    url("../fonts/GeneralSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GeneralSans-Semibold";
+  src: url("../fonts/GeneralSans-Semibold.woff2") format("woff2"),
+    url("../fonts/GeneralSans-Semibold.woff") format("woff"),
+    url("../fonts/GeneralSans-Semibold.ttf") format("truetype");
   font-weight: 600;
   font-display: swap;
   font-style: normal;
