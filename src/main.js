@@ -1,21 +1,21 @@
 import "./style.css";
 
-/*
-document.querySelector("#app").innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`;
-*/
+const getPreferredTheme = () => {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    return savedTheme;
+  }
+  return "dark";
+};
+
+const setTheme = (theme) => {
+  document.documentElement.setAttribute("data-theme", theme);
+  localStorage.setItem("theme", theme);
+};
+
+setTheme(getPreferredTheme());
+
+document.querySelector(".theme-toggle")?.addEventListener("click", () => {
+  const currentTheme = document.documentElement.getAttribute("data-theme");
+  setTheme(currentTheme === "dark" ? "light" : "dark");
+});
