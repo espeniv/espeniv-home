@@ -48,8 +48,8 @@ body {
   height: 100%;
 }
 
-:root[data-theme="dark"] .sun-icon,
-:root:not([data-theme="dark"]) .moon-icon {
+:root[data-theme="dark"] .moon-icon,
+:root:not([data-theme="dark"]) .sun-icon {
   display: none;
 }
 
@@ -72,15 +72,15 @@ body {
 
 h1 {
   font-family: "ClashDisplay-Medium";
-  font-size: 50px;
+  font-size: 55px;
   margin: 0;
 }
 
 h2 {
   font-family: "ClashDisplay-Regular";
-  font-size: 50px;
-  margin-top: 80px;
-  margin-bottom: 20px;
+  font-size: 45px;
+  margin-top: 60px;
+  margin-bottom: -30px;
 }
 
 h3 {
@@ -94,6 +94,11 @@ h3 {
   color: var(--hover-color);
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .header {
   display: flex;
   flex-direction: row;
@@ -102,7 +107,7 @@ h3 {
   max-width: 700px;
   padding: 0 20px;
   box-sizing: border-box;
-  margin-top: 64px;
+  margin-top: 80px;
 }
 
 .header-left {
@@ -133,22 +138,16 @@ h3 {
   max-width: 700px;
   padding: 0 20px;
   box-sizing: border-box;
-  margin-top: 64px;
+  margin-top: 40px;
 }
 
 .about-me {
   font-size: 28px;
   font-family: "GeneralSans-Regular";
-  margin-bottom: 80px;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
 }
 
 .project-container {
-  margin-bottom: 48px;
+  margin-bottom: 40px;
   padding: 20px;
   border-radius: 8px;
   transition: all 0.3s ease;
@@ -187,8 +186,8 @@ a {
   }
 
   .image {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     margin-right: 20px;
   }
 
@@ -198,22 +197,26 @@ a {
   }
 
   .main-section {
-    margin-top: 30px;
+    margin-top: 20px;
   }
 
   .about-me {
     margin-bottom: 30px;
-    font-size: 24px;
+    font-size: 20px;
   }
 
   h1 {
-    font-size: 24px;
+    font-size: 26px;
   }
 
   h2 {
-    font-size: 40px;
+    font-size: 32px;
     margin-top: 60px;
     margin-bottom: 0px;
+  }
+
+  h3 {
+    font-size: 22px;
   }
 
   .project-container {
@@ -240,9 +243,9 @@ a {
 
 @font-face {
   font-family: "ClashDisplay-Regular";
-  src: url("../public/fonts/ClashDisplay-Regular.woff2") format("woff2"),
-    url("../public/fonts/ClashDisplay-Regular.woff") format("woff"),
-    url("../public/fonts/ClashDisplay-Regular.ttf") format("truetype");
+  src: url("../fonts/ClashDisplay-Regular.woff2") format("woff2"),
+    url("../fonts/ClashDisplay-Regular.woff") format("woff"),
+    url("../fonts/ClashDisplay-Regular.ttf") format("truetype");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
@@ -250,20 +253,10 @@ a {
 
 @font-face {
   font-family: "ClashDisplay-Medium";
-  src: url("../public/fonts/ClashDisplay-Medium.woff2") format("woff2"),
-    url("../public/fonts/ClashDisplay-Medium.woff") format("woff"),
-    url("../public/fonts/ClashDisplay-Medium.ttf") format("truetype");
+  src: url("../fonts/ClashDisplay-Medium.woff2") format("woff2"),
+    url("../fonts/ClashDisplay-Medium.woff") format("woff"),
+    url("../fonts/ClashDisplay-Medium.ttf") format("truetype");
   font-weight: 500;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "ClashDisplay-Semibold";
-  src: url("../fonts/ClashDisplay-Semibold.woff2") format("woff2"),
-    url("../fonts/ClashDisplay-Semibold.woff") format("woff"),
-    url("../fonts/ClashDisplay-Semibold.ttf") format("truetype");
-  font-weight: 600;
   font-display: swap;
   font-style: normal;
 }
@@ -276,26 +269,8 @@ a {
 * URL: https://www.fontshare.com/fonts/general-sans
 * © 2025 Indian Type Foundry
 *
-
-* General Sans Light 
-* General Sans Regular 
-* General Sans Medium 
-* General Sans Semibold 
-* General Sans Bold 
-
-
 *
 */
-
-@font-face {
-  font-family: "GeneralSans-Light";
-  src: url("../fonts/GeneralSans-Light.woff2") format("woff2"),
-    url("../fonts/GeneralSans-Light.woff") format("woff"),
-    url("../fonts/GeneralSans-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-display: swap;
-  font-style: normal;
-}
 
 @font-face {
   font-family: "GeneralSans-Regular";
@@ -303,26 +278,6 @@ a {
     url("../fonts/GeneralSans-Regular.woff") format("woff"),
     url("../fonts/GeneralSans-Regular.ttf") format("truetype");
   font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "GeneralSans-Medium";
-  src: url("../fonts/GeneralSans-Medium.woff2") format("woff2"),
-    url("../fonts/GeneralSans-Medium.woff") format("woff"),
-    url("../fonts/GeneralSans-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "GeneralSans-Semibold";
-  src: url("../fonts/GeneralSans-Semibold.woff2") format("woff2"),
-    url("../fonts/GeneralSans-Semibold.woff") format("woff"),
-    url("../fonts/GeneralSans-Semibold.ttf") format("truetype");
-  font-weight: 600;
   font-display: swap;
   font-style: normal;
 }
