@@ -1,5 +1,6 @@
 :root {
-  font-family: "Open sans";
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
   color-scheme: light dark;
 
   --text-color: #000000;
@@ -71,20 +72,23 @@ body {
 }
 
 h1 {
-  font-family: "ClashDisplay-Medium";
+  font-family: "ClashDisplay-Medium", -apple-system, system-ui, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 55px;
   margin: 0;
 }
 
 h2 {
-  font-family: "ClashDisplay-Regular";
+  font-family: "ClashDisplay-Regular", -apple-system, system-ui, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 45px;
   margin-top: 60px;
   margin-bottom: -30px;
 }
 
 h3 {
-  font-family: "ClashDisplay-Medium";
+  font-family: "ClashDisplay-Medium", -apple-system, system-ui, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 30px;
   color: var(--text-color);
   transition: color 0.3s ease;
@@ -143,7 +147,8 @@ a {
 
 .about-me {
   font-size: 28px;
-  font-family: "GeneralSans-Regular";
+  font-family: "GeneralSans-Regular", -apple-system, system-ui, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 .project-container {
@@ -166,7 +171,8 @@ a {
 
 .project-description {
   font-size: 22px;
-  font-family: "GeneralSans-Regular";
+  font-family: "GeneralSans-Regular", -apple-system, system-ui, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   color: rgb(110, 110, 110);
   margin-top: 8px;
 }
