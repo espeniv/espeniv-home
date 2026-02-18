@@ -252,7 +252,7 @@ a {
     url("../fonts/ClashDisplay-Regular.woff") format("woff"),
     url("../fonts/ClashDisplay-Regular.ttf") format("truetype");
   font-weight: 400;
-  font-display: swap;
+  font-display: optional;
   font-style: normal;
 }
 
@@ -262,7 +262,7 @@ a {
     url("../fonts/ClashDisplay-Medium.woff") format("woff"),
     url("../fonts/ClashDisplay-Medium.ttf") format("truetype");
   font-weight: 500;
-  font-display: swap;
+  font-display: optional;
   font-style: normal;
 }
 
@@ -283,6 +283,6 @@ a {
     url("../fonts/GeneralSans-Regular.woff") format("woff"),
     url("../fonts/GeneralSans-Regular.ttf") format("truetype");
   font-weight: 400;
-  font-display: swap;
+  font-display: optional;
   font-style: normal;
 }
