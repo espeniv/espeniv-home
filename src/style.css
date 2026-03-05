@@ -1,6 +1,7 @@
 :root {
-  font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
-    Arial, sans-serif;
+  font-family:
+    -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    sans-serif;
   color-scheme: light dark;
 
   --text-color: #000000;
@@ -24,7 +25,9 @@ body {
   align-items: center;
   color: var(--text-color);
   background-color: var(--bg-color);
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .theme-toggle {
@@ -72,23 +75,47 @@ body {
 }
 
 h1 {
-  font-family: "ClashDisplay-Medium", -apple-system, system-ui, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family:
+    "ClashDisplay-Medium",
+    "ClashDisplay-Medium Fallback",
+    -apple-system,
+    system-ui,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
   font-size: 55px;
   margin: 0;
 }
 
 h2 {
-  font-family: "ClashDisplay-Regular", -apple-system, system-ui, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family:
+    "ClashDisplay-Regular",
+    "ClashDisplay-Regular Fallback",
+    -apple-system,
+    system-ui,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
   font-size: 45px;
   margin-top: 60px;
   margin-bottom: -30px;
 }
 
 h3 {
-  font-family: "ClashDisplay-Medium", -apple-system, system-ui, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family:
+    "ClashDisplay-Medium",
+    "ClashDisplay-Medium Fallback",
+    -apple-system,
+    system-ui,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
   font-size: 30px;
   color: var(--text-color);
   transition: color 0.3s ease;
@@ -147,8 +174,16 @@ a {
 
 .about-me {
   font-size: 28px;
-  font-family: "GeneralSans-Regular", -apple-system, system-ui, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family:
+    "GeneralSans-Regular",
+    "GeneralSans-Regular Fallback",
+    -apple-system,
+    system-ui,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
 }
 
 .project-container {
@@ -158,6 +193,7 @@ a {
   margin-left: -20px;
   margin-right: -20px;
   margin-bottom: -70px;
+  cursor: pointer;
 }
 
 .project-container h3 {
@@ -169,10 +205,65 @@ a {
   color: #8db4fc;
 }
 
+.project-links:only-child .project-link-icon:only-child {
+  transition: color 0.3s ease;
+}
+
+.project-container:hover .project-links a:only-child .project-link-icon {
+  color: var(--hover-color);
+}
+
+.project-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 2em;
+  gap: 10px;
+}
+
+.project-header h3 {
+  margin: 0;
+}
+
+.project-links {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.project-link-icon {
+  color: var(--description-color);
+  transition: color 0.3s ease;
+  display: block;
+  width: 26px;
+  height: 26px;
+}
+
+.project-link-icon:hover {
+  color: var(--hover-color);
+}
+
+.project-link-icon.app-icon {
+  border-radius: 6px;
+}
+
+.project-link-icon.app-store-icon {
+  width: 25px;
+  height: 25px;
+}
+
 .project-description {
   font-size: 22px;
-  font-family: "GeneralSans-Regular", -apple-system, system-ui, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family:
+    "GeneralSans-Regular",
+    "GeneralSans-Regular Fallback",
+    -apple-system,
+    system-ui,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
   color: rgb(110, 110, 110);
   margin-top: 8px;
 }
@@ -232,6 +323,16 @@ a {
   .project-description {
     font-size: 18px;
   }
+
+  .project-link-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .project-link-icon.app-store-icon {
+    width: 19px;
+    height: 19px;
+  }
 }
 
 /* Fonts */
@@ -247,22 +348,44 @@ a {
 */
 
 @font-face {
+  font-family: "ClashDisplay-Regular Fallback";
+  src:
+    local("BlinkMacSystemFont"), local("Segoe UI"), local("Roboto"),
+    local("Helvetica Neue"), local("Arial");
+  ascent-override: 89%;
+  descent-override: 25%;
+  line-gap-override: 9%;
+}
+
+@font-face {
   font-family: "ClashDisplay-Regular";
-  src: url("../fonts/ClashDisplay-Regular.woff2") format("woff2"),
+  src:
+    url("../fonts/ClashDisplay-Regular.woff2") format("woff2"),
     url("../fonts/ClashDisplay-Regular.woff") format("woff"),
     url("../fonts/ClashDisplay-Regular.ttf") format("truetype");
   font-weight: 400;
-  font-display: optional;
+  font-display: swap;
   font-style: normal;
 }
 
 @font-face {
+  font-family: "ClashDisplay-Medium Fallback";
+  src:
+    local("BlinkMacSystemFont"), local("Segoe UI"), local("Roboto"),
+    local("Helvetica Neue"), local("Arial");
+  ascent-override: 89%;
+  descent-override: 25%;
+  line-gap-override: 9%;
+}
+
+@font-face {
   font-family: "ClashDisplay-Medium";
-  src: url("../fonts/ClashDisplay-Medium.woff2") format("woff2"),
+  src:
+    url("../fonts/ClashDisplay-Medium.woff2") format("woff2"),
     url("../fonts/ClashDisplay-Medium.woff") format("woff"),
     url("../fonts/ClashDisplay-Medium.ttf") format("truetype");
   font-weight: 500;
-  font-display: optional;
+  font-display: swap;
   font-style: normal;
 }
 
@@ -278,11 +401,22 @@ a {
 */
 
 @font-face {
+  font-family: "GeneralSans-Regular Fallback";
+  src:
+    local("BlinkMacSystemFont"), local("Segoe UI"), local("Roboto"),
+    local("Helvetica Neue"), local("Arial");
+  ascent-override: 101%;
+  descent-override: 24%;
+  line-gap-override: 10%;
+}
+
+@font-face {
   font-family: "GeneralSans-Regular";
-  src: url("../fonts/GeneralSans-Regular.woff2") format("woff2"),
+  src:
+    url("../fonts/GeneralSans-Regular.woff2") format("woff2"),
     url("../fonts/GeneralSans-Regular.woff") format("woff"),
     url("../fonts/GeneralSans-Regular.ttf") format("truetype");
   font-weight: 400;
-  font-display: optional;
+  font-display: swap;
   font-style: normal;
 }

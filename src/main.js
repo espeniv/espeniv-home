@@ -19,3 +19,10 @@ document.querySelector(".theme-toggle")?.addEventListener("click", () => {
   const currentTheme = document.documentElement.getAttribute("data-theme");
   setTheme(currentTheme === "dark" ? "light" : "dark");
 });
+
+document.querySelectorAll(".project-container[data-href]").forEach((card) => {
+  card.addEventListener("click", (e) => {
+    if (e.target.closest("a")) return;
+    window.open(card.dataset.href, "_blank");
+  });
+});
