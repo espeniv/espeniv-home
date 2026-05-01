@@ -193,6 +193,9 @@ a {
   margin-left: -20px;
   margin-right: -20px;
   margin-bottom: -70px;
+}
+
+.project-container[data-href] {
   cursor: pointer;
 }
 
